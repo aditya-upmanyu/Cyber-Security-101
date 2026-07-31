@@ -1,0 +1,130 @@
+# **TryHackMe – Defensive Security (1-Page Revision Notes)**
+
+## **Task 1 – Think Like a Defender**
+
+### **Defensive Security**
+
+Defensive Security is the practice of **protecting computers, networks, and systems** from cyber attacks. Unlike attackers (Offensive Security), defenders **monitor, detect, investigate, and respond** to threats before they cause damage.
+
+### **Responsibilities of a Defender**
+
+* 🛡️ Monitor systems continuously
+* 🔍 Detect suspicious activities
+* 🕵️ Investigate security alerts
+* 🚨 Respond to incidents quickly
+* 🔒 Protect systems from future attacks
+
+### **Remember**
+
+> **Offensive Security = Attack Systems**
+> **Defensive Security = Protect Systems**
+
+### **Question & Answer**
+
+**Q. What is the main goal of Defensive Security?**
+**Ans:** Detect and respond to attacks.
+
+---
+
+# **Task 2 – Detect Suspicious Activity**
+
+### **SOC (Security Operations Center)**
+
+A **SOC Analyst** monitors security dashboards to identify abnormal or malicious activities.
+
+### **Process**
+
+1. Open the monitoring dashboard.
+2. Review recent alerts.
+3. Identify the suspicious **Source IP Address**.
+4. Investigate before the attack spreads.
+
+### **Key Term**
+
+* **Source IP:** IP address from which suspicious traffic originates.
+
+### **Question & Answer**
+
+**Q. Which source IP address is generating the suspicious traffic?**
+**Ans:** `32.122.195.63`
+
+---
+
+# **Task 3 – Identify the Attack**
+
+### **Goal**
+
+After identifying the attacker, determine **what they are trying to do**.
+
+### **Steps**
+
+1. Open the monitoring dashboard.
+2. Go to **URL Discovery Attempts**.
+3. Check the **latest entry**.
+4. Copy the latest URL attempted by the attacker.
+
+### **Key Concept**
+
+Attackers often perform **URL Discovery (Directory Enumeration)** to find:
+
+* Hidden pages
+* Admin panels
+* Login portals
+* Backup files
+* Sensitive directories
+
+### **Question & Answer**
+
+**Q. Copy the latest URL the attacker tried to access.**
+**Ans:** Copy the latest URL shown in the **URL Discovery Attempts** section.
+
+---
+
+# **Task 4 – Stop the Attack**
+
+### **Containment**
+
+The first priority during an active cyber attack is **Containment**, meaning stop the attack immediately to prevent further damage.
+
+### **Steps**
+
+1. Open **Security Actions**.
+2. Enter the attacker's IP:
+
+   ```
+   32.122.195.63
+   ```
+3. Select **BLOCK**.
+4. Click **Apply**.
+5. Copy the success **Flag**.
+
+### **Firewall**
+
+A **Firewall** filters network traffic and can **ALLOW** or **BLOCK** connections based on security rules.
+
+### **Question & Answer**
+
+**Q. What flag appears after blocking the attacker?**
+**Ans:** Copy the flag displayed after successfully applying the firewall rule.
+
+---
+
+# **Quick Revision**
+
+| Topic              | Remember                                       |
+| ------------------ | ---------------------------------------------- |
+| Defensive Security | Detect, Investigate, Respond, Protect          |
+| SOC Analyst        | Monitors security alerts and incidents         |
+| Source IP          | IP address generating suspicious traffic       |
+| URL Discovery      | Attacker searches for hidden pages/directories |
+| Containment        | Stop the attack immediately                    |
+| Firewall           | Blocks or allows network traffic               |
+
+## **Exam Points**
+
+* Defensive Security = **Protect systems**
+* SOC analysts investigate alerts.
+* Always identify the **Source IP**.
+* URL Discovery helps attackers find hidden resources.
+* **Containment** is the first response to an active attack.
+* Firewalls are used to **BLOCK malicious IP addresses**.
