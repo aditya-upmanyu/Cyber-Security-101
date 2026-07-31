@@ -1,0 +1,116 @@
+**TryHackMe – Offensive Security Intro Notes**
+
+---
+
+# TryHackMe – Offensive Security Intro
+
+## Task 1 – Think Like a Hacker!
+
+### Objective
+
+Understand what Offensive Security is and how ethical hackers think like attackers to identify vulnerabilities before malicious hackers can exploit them.
+
+### Key Concept
+
+**Offensive Security** is the practice of legally simulating cyberattacks to discover weaknesses in systems, applications, or networks.
+
+### Answer
+
+**Question:** Which term describes simulating a hacker's actions to find weaknesses?
+
+**Answer:** Offensive Security
+
+---
+
+## Task 2 – FakeBank
+
+### Objective
+
+Open the FakeBank application and identify the bank account number assigned to you.
+
+### Answer
+
+**Question:** What is the bank account number in the FakeBank application?
+
+**Answer:** 8881
+
+---
+
+## Task 3 – Find Hidden Pages
+
+### Objective
+
+Use the **Dirb** tool to discover hidden directories on the FakeBank website.
+
+### Command Used
+
+```bash
+dirb http://fakebank.thm
+```
+
+### Description
+
+Dirb is a directory brute-forcing tool used to discover hidden files and directories on a web server.
+
+The scan reveals two directories:
+
+* [http://fakebank.thm/images](http://fakebank.thm/images)
+* [http://fakebank.thm/bank-transfer](http://fakebank.thm/bank-transfer)
+
+### Answer
+
+**Question:** Dirb found one URL, [http://fakebank.thm/images](http://fakebank.thm/images). What is the other hidden URL?
+
+**Answer:** [http://fakebank.thm/bank-transfer](http://fakebank.thm/bank-transfer)
+
+---
+
+## Task 4 – Attack the Admin Page
+
+### Objective
+
+Access the hidden admin page and deposit money into your FakeBank account.
+
+### Steps
+
+1. Open the following URL:
+
+   ```
+   http://fakebank.thm/bank-transfer
+   ```
+2. Enter the account number:
+
+   ```
+   8881
+   ```
+3. Deposit **$2000 or more**.
+4. Return to the account page.
+5. Confirm that the balance is now positive.
+6. A green popup message will appear.
+
+### Answer
+
+**Question:** When your balance turns positive, a popup with green text appears. Enter the green words (ALL CAPS).
+
+**Answer:** BANK-HACKED
+
+---
+
+# Important Command
+
+```bash
+dirb http://fakebank.thm
+```
+
+**Purpose:** Finds hidden directories and pages on a website.
+
+---
+
+# Summary
+
+| Task   | Answer                                                                 |
+| ------ | ---------------------------------------------------------------------- |
+| Task 1 | Offensive Security                                                     |
+| Task 2 | 8881                                                                   |
+| Task 3 | [http://fakebank.thm/bank-transfer](http://fakebank.thm/bank-transfer) |
+| Task 4 | BANK-HACKED                                                            |
