@@ -1,116 +1,139 @@
-**TryHackMe – Offensive Security Intro Notes**
+Below is a **clean, Word-friendly version**. You can copy-paste it directly into Microsoft Word without formatting issues.
 
 ---
 
 # TryHackMe – Offensive Security Intro
 
-## Task 1 – Think Like a Hacker!
+## Task 1: Think Like a Hacker
 
 ### Objective
 
-Understand what Offensive Security is and how ethical hackers think like attackers to identify vulnerabilities before malicious hackers can exploit them.
+Learn what Offensive Security is and how ethical hackers find vulnerabilities by thinking like attackers.
 
-### Key Concept
+### Notes
 
-**Offensive Security** is the practice of legally simulating cyberattacks to discover weaknesses in systems, applications, or networks.
+* Offensive Security focuses on attacking systems in a legal and controlled manner.
+* Ethical hackers simulate real cyberattacks to identify security weaknesses.
+* The goal is to fix vulnerabilities before malicious hackers exploit them.
 
-### Answer
-
-**Question:** Which term describes simulating a hacker's actions to find weaknesses?
-
-**Answer:** Offensive Security
+**Answer:**
+Offensive Security
 
 ---
 
-## Task 2 – FakeBank
+## Task 2: FakeBank
 
 ### Objective
 
-Open the FakeBank application and identify the bank account number assigned to you.
+Access the FakeBank application and identify your bank account number.
 
-### Answer
+### Notes
 
-**Question:** What is the bank account number in the FakeBank application?
+* Open the FakeBank website provided in the room.
+* Log in to the application.
+* Your account number is displayed on the dashboard.
 
-**Answer:** 8881
+**Answer:**
+8881
 
 ---
 
-## Task 3 – Find Hidden Pages
+## Task 3: Find Hidden Pages
 
 ### Objective
 
-Use the **Dirb** tool to discover hidden directories on the FakeBank website.
+Discover hidden directories on the FakeBank website using Dirb.
 
-### Command Used
+### Tool Used
 
-```bash
-dirb http://fakebank.thm
-```
+Dirb
 
-### Description
+### Command
 
-Dirb is a directory brute-forcing tool used to discover hidden files and directories on a web server.
+dirb [http://fakebank.thm](http://fakebank.thm)
 
-The scan reveals two directories:
+### Notes
 
-* [http://fakebank.thm/images](http://fakebank.thm/images)
-* [http://fakebank.thm/bank-transfer](http://fakebank.thm/bank-transfer)
+* Dirb is a directory brute-forcing tool.
+* It searches for hidden folders and files on a web server.
+* Any result beginning with '+' indicates a discovered directory.
 
-### Answer
+### Hidden Directories Found
 
-**Question:** Dirb found one URL, [http://fakebank.thm/images](http://fakebank.thm/images). What is the other hidden URL?
+1. [http://fakebank.thm/images](http://fakebank.thm/images)
+2. [http://fakebank.thm/bank-transfer](http://fakebank.thm/bank-transfer)
 
-**Answer:** [http://fakebank.thm/bank-transfer](http://fakebank.thm/bank-transfer)
+**Answer:**
+[http://fakebank.thm/bank-transfer](http://fakebank.thm/bank-transfer)
 
 ---
 
-## Task 4 – Attack the Admin Page
+## Task 4: Attack the Admin Page
 
 ### Objective
 
-Access the hidden admin page and deposit money into your FakeBank account.
+Use the hidden admin page to deposit money into your account.
 
 ### Steps
 
-1. Open the following URL:
+1. Open:
+   [http://fakebank.thm/bank-transfer](http://fakebank.thm/bank-transfer)
 
-   ```
-   http://fakebank.thm/bank-transfer
-   ```
-2. Enter the account number:
-
-   ```
+2. Enter Account Number:
    8881
-   ```
-3. Deposit **$2000 or more**.
+
+3. Deposit:
+   $2000 or more
+
 4. Return to the account page.
-5. Confirm that the balance is now positive.
-6. A green popup message will appear.
 
-### Answer
+5. Verify that your balance is now positive.
 
-**Question:** When your balance turns positive, a popup with green text appears. Enter the green words (ALL CAPS).
+6. A green success popup will appear.
 
-**Answer:** BANK-HACKED
-
----
-
-# Important Command
-
-```bash
-dirb http://fakebank.thm
-```
-
-**Purpose:** Finds hidden directories and pages on a website.
+**Answer:**
+BANK-HACKED
 
 ---
 
-# Summary
+# Command Learned
 
-| Task   | Answer                                                                 |
-| ------ | ---------------------------------------------------------------------- |
-| Task 1 | Offensive Security                                                     |
-| Task 2 | 8881                                                                   |
-| Task 3 | [http://fakebank.thm/bank-transfer](http://fakebank.thm/bank-transfer) |
-| Task 4 | BANK-HACKED                                                            |
+Command:
+dirb [http://fakebank.thm](http://fakebank.thm)
+
+Purpose:
+
+* Scans a website for hidden directories and files.
+* Helps discover admin panels and other hidden pages.
+
+---
+
+# Key Points
+
+• Offensive Security means legally simulating cyberattacks.
+
+• Ethical hackers think like attackers to identify vulnerabilities.
+
+• Dirb is a directory brute-force tool.
+
+• Hidden directories can reveal sensitive pages such as admin panels.
+
+• The hidden page in this room is:
+[http://fakebank.thm/bank-transfer](http://fakebank.thm/bank-transfer)
+
+• Depositing money through the hidden admin page makes the account balance positive.
+
+• After a successful deposit, the popup displays:
+BANK-HACKED
+
+---
+
+# Final Answers
+
+Task 1: Offensive Security
+
+Task 2: 8881
+
+Task 3: [http://fakebank.thm/bank-transfer](http://fakebank.thm/bank-transfer)
+
+Task 4: BANK-HACKED
