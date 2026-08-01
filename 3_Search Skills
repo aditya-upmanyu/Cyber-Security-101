@@ -1,1 +1,188 @@
+# TryHackMe - Information Gathering Resources
 
+========================================
+Task 1 - Introduction
+========================================
+
+Definition:
+Information Gathering is the process of collecting information about systems, services, vulnerabilities, tools, and threats using publicly available resources.
+
+Why it is Important:
+- Helps both Offensive and Defensive Security.
+- Used for Reconnaissance.
+- Helps find vulnerabilities and exploits.
+- Improves threat intelligence and investigations.
+
+Key Point:
+Knowing WHERE to search is as important as knowing WHAT to search.
+
+Question:
+Q. I'm ready to begin!
+Answer:
+No answer required.
+
+----------------------------------------
+
+Task 2 - Shodan (TryScanMe)
+
+Definition:
+Shodan is a search engine that scans the Internet for publicly accessible devices such as web servers, routers, cameras, IoT devices, firewalls, and industrial control systems.
+
+Uses:
+- Find exposed devices
+- Identify software versions
+- Discover open ports
+- Find vulnerable services
+- External reconnaissance
+
+Common Filters:
+country:IN      -> Search by country
+port:22         -> Search by port
+org:AS7224      -> Search by organization
+hostname:abc.com -> Search by hostname
+
+Approach:
+1. Open TryScanMe.
+2. Search "apache".
+3. Open the first result.
+4. Read the Domain field.
+5. Submit the answer.
+
+Question:
+Q. What domain is associated with IP address 185.243.115.47?
+Answer:
+tryhackme.thm
+
+----------------------------------------
+
+Task 3 - VirusTotal (TryDetectMe)
+
+Definition:
+VirusTotal is an online malware analysis platform that scans files, URLs, domains, and hashes using 70+ antivirus engines.
+
+Uses:
+- Malware detection
+- File reputation checking
+- URL scanning
+- Threat intelligence
+- IOC verification
+
+Approach:
+1. Open TryDetectMe.
+2. Search invoice_payment.exe.
+3. Read the Detection Count at the top.
+4. Submit the number.
+
+Question:
+Q. How many security vendors identified the file as dangerous?
+Answer:
+52
+
+----------------------------------------
+
+Task 4 - Vulnerability Database (CVE)
+
+Definition:
+CVE (Common Vulnerabilities and Exposures) is a unique identifier assigned to publicly known security vulnerabilities.
+
+Format:
+CVE-YYYY-NUMBER
+Example:
+CVE-2026-1337
+
+CVSS (Common Vulnerability Scoring System):
+Measures the severity of a vulnerability.
+
+Severity Levels:
+0.0 = None
+0.1-3.9 = Low
+4.0-6.9 = Medium
+7.0-8.9 = High
+9.0-10.0 = Critical
+
+Approach:
+1. Open the Vulnerability Database.
+2. Search CVE-2026-1337.
+3. Read the CVSS Classification.
+4. Submit it.
+
+Question:
+Q. What CVSS classification did CVE-2026-1337 receive?
+Answer:
+(Check the lab result, e.g. High or Critical.)
+
+----------------------------------------
+
+Task 5 - Technical Documentation (MAN)
+
+Definition:
+MAN (Manual Pages) is the official Linux documentation for commands and tools.
+
+Syntax:
+man <command>
+
+Example:
+man nc
+
+Uses:
+- Learn command syntax
+- View options
+- Read examples
+- Troubleshoot commands
+
+Approach:
+1. Open the MAN page simulator.
+2. Search for nc.
+3. Scroll to the Examples section.
+4. Copy the example command.
+
+Question:
+Q. What is the example command?
+Answer:
+nc host.example.com 42
+
+----------------------------------------
+
+Task 6 - GitHub
+
+Definition:
+GitHub is a code hosting platform where researchers publish Proof of Concepts (PoCs), exploits, security tools, and vulnerability research.
+
+Uses:
+- Find PoC exploits
+- Security tools
+- Vulnerability research
+- Technical documentation
+
+Note:
+Always review PoC code before executing it.
+
+Approach:
+1. Open the repository.
+2. Read the README.
+3. Find the exploit script name.
+4. Submit it.
+
+Question:
+Q. What is the name of the exploit script?
+Answer:
+exploit.py
+
+========================================
+Quick Revision
+========================================
+
+Shodan      -> Search engine for Internet-connected devices.
+VirusTotal  -> Malware scanning using 70+ antivirus engines.
+CVE         -> Unique identifier for known vulnerabilities.
+CVSS        -> Severity score of a vulnerability.
+MAN         -> Official Linux command documentation.
+GitHub      -> PoCs, exploits, security tools, and research.
+
+Remember:
+Shodan = Find exposed systems.
+VirusTotal = Check if a file or URL is malicious.
+CVE = Vulnerability ID.
+CVSS = Vulnerability severity.
+man = Linux help command.
+GitHub = Security research and exploit code.
