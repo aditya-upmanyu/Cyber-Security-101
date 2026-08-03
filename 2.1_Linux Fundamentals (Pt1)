@@ -1,0 +1,178 @@
+# TryHackMe - Linux Fundamentals (Tasks 2–5)
+
+## Task 2 - Who Are You on This Machine?
+
+### Commands
+
+| Command | Purpose | Example |
+|---------|---------|---------|
+| `whoami` | Displays the current logged-in user | `whoami` |
+| `echo` | Prints text to the terminal | `echo "TryHackMe"` |
+
+### Key Points
+
+- Linux servers are mainly controlled through the terminal (CLI).
+- Every command produces an output.
+- `whoami` shows the current user.
+- `echo` prints text.
+
+### Answers
+
+**Current user command**
+```bash
+whoami
+```
+
+**Print text command**
+```bash
+echo
+```
+
+---
+
+## Task 3 - Finding Your Way Around
+
+### Commands
+
+| Command | Purpose |
+|---------|---------|
+| `ls` | List files and folders |
+| `cd` | Change directory |
+| `pwd` | Show current directory |
+| `cat` | Display file contents |
+
+### Lab Commands
+
+```bash
+ls
+cd folder1
+ls
+cat <filename>
+pwd
+```
+
+### Answers
+
+**How many folders?**
+```
+4
+```
+
+**Folder containing the file**
+```
+folder1
+```
+
+**File content**
+```
+password123
+```
+
+---
+
+## Task 4 - Let the Machine Do the Searching
+
+### Commands
+
+| Command | Purpose |
+|---------|---------|
+| `find` | Search files by name |
+| `grep` | Search text inside files |
+
+### Lab Commands
+
+```bash
+cd /home/tryhackme
+grep "THM" access.log
+```
+
+### Example
+
+```bash
+find -name passwords.txt
+grep "password123" passwords.txt
+```
+
+### Flag
+
+```
+THM{...}
+```
+
+---
+
+## Task 5 - Operators & Redirection
+
+### Operators
+
+| Operator | Purpose |
+|----------|---------|
+| `&` | Run command in background |
+| `&&` | Run second command after first succeeds |
+| `>` | Redirect output (overwrite file) |
+| `>>` | Redirect output (append to file) |
+
+### Examples
+
+Overwrite a file
+
+```bash
+echo "TryHackMe" > thm
+```
+
+Append to a file
+
+```bash
+echo "thm" >> thm
+```
+
+View file
+
+```bash
+cat thm
+```
+
+Run two commands
+
+```bash
+mkdir test && cd test
+```
+
+Background execution
+
+```bash
+sleep 30 &
+```
+
+### Answers
+
+**Operator that waits for the first command**
+
+```
+&&
+```
+
+**Redirector that appends without overwriting**
+
+```
+>>
+```
+
+---
+
+# Quick Revision
+
+| Command | Purpose |
+|---------|---------|
+| `whoami` | Show current user |
+| `echo` | Print text |
+| `ls` | List files and folders |
+| `cd` | Change directory |
+| `pwd` | Show current directory |
+| `cat` | Read file contents |
+| `find` | Search files |
+| `grep` | Search text inside files |
+| `&` | Run in background |
+| `&&` | Run next command after success |
+| `>` | Overwrite file |
+| `>>` | Append to file |
